@@ -1,0 +1,98 @@
+.hero
+    height: 100vh
+    width: 100vw
+    position: relative
+    background-image: url('../img/hero/hero-background.png')
+    background-repeat: no-repeat
+    background-size: cover
+    &-content
+        position: relative
+        height: 100%
+        width: 100%
+        &-wrapper
+            text-align: right
+            position: absolute
+            top: 250px
+            right: 0
+            width: 42vw
+        &-announcements
+            position: absolute
+            top: 150px
+            left: 60%
+            width: 130px
+            height: 130px
+            background-image: url('../img/hero/warn-sign.png') 
+            background-repeat: no-repeat
+            background-position: left top
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            &__secondary,
+            &__primary
+                color: #ffffff
+            &__secondary
+                display: block
+                +l-regular
+            &__primary
+                display: block
+                font-size: 30px
+                +l-bold
+        &__button
+            position: relative
+            margin-bottom: 20px
+            z-index: 1
+            +m-bold
+            font-size: 18px
+            &::before
+                position: absolute
+                top: calc(50% - 9px)
+                left: 0
+                content: ''
+                width: 20px
+                height: 20px
+                background-color: $primary
+                transform: rotate(45deg)
+                z-index: -1
+                margin-right: -15px
+        &__above-sign
+            display: block
+            font-size: 18px
+            color: $primary
+            text-transform: uppercase
+            +m-bold
+            margin-bottom: 14px
+        &__title
+            display: block
+            font-size: 36px
+            +m-bold
+            color: #ffffff
+            text-transform: uppercase
+            margin-bottom: 22px
+        &__desc
+            display: block
+            font-size: 16px
+            color: #ffffff
+            +m-regular
+            line-height: 24px
+            margin-bottom: 32px
+        &__buy-button
+            display: inline-block
+            font-size: 14px
+            +l-bold
+            font-weight: 700
+            margin-bottom: 13px
+        &__anchor
+            text-decoration: none
+            display: block
+            color: #ffffff
+            letter-spacing: 4.85px
+            +l-regular
+        &-indicator
+            width: 100%
+            position: absolute
+            bottom: 1%
+            display: flex
+            justify-content: center
+            align-items: center
+        

@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.button--primary {
+  border: none;
+  padding: 14px 17px;
+  text-transform: uppercase;
+  background-color: #a07936;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slider__item {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.slider__item--active {
+  border-radius: 15px;
+  width: 40px;
+  background-color: #a07936 !important;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.header-nav {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: centec;
+      -ms-flex-align: centec;
+          align-items: centec;
+}
+
+.header-nav-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav-brand-text {
+  width: 146px;
+  height: 32px;
+  margin-left: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.header-nav-brand-text__title {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.header-nav-brand-text__desc {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  display: block;
+  color: #ffffff;
+  letter-spacing: 1.24px;
+}
+
+.header-nav-links {
+  width: 632px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav-links__item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+}
+
+.header-nav-links__item::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #a07936;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.header-nav-links__item:hover::before {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+}
+
+.header-nav-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav-actions__item {
+  margin-right: 34px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.header-nav-actions__item-wrapper {
+  position: relative;
+}
+
+.header-nav-actions__item-wrapper::after {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  content: '2';
+  width: 25px;
+  height: 22px;
+  background-color: #a07936;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.header-nav-actions-hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.header-nav-actions-hamburger__item {
+  width: 16px;
+  height: 3px;
+  margin-bottom: 1px;
+  background-color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("../img/hero/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-content-wrapper {
+  text-align: right;
+  position: absolute;
+  top: 250px;
+  right: 0;
+  width: 42vw;
+}
+
+.hero-content-announcements {
+  position: absolute;
+  top: 150px;
+  left: 60%;
+  width: 130px;
+  height: 130px;
+  background-image: url("../img/hero/warn-sign.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero-content-announcements__secondary, .hero-content-announcements__primary {
+  color: #ffffff;
+}
+
+.hero-content-announcements__secondary {
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero-content-announcements__primary {
+  display: block;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.hero-content__button {
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.hero-content__button::before {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 0;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #a07936;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: -1;
+  margin-right: -15px;
+}
+
+.hero-content__above-sign {
+  display: block;
+  font-size: 18px;
+  color: #a07936;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.hero-content__title {
+  display: block;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.hero-content__desc {
+  display: block;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.hero-content__buy-button {
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.hero-content__anchor {
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+  letter-spacing: 4.85px;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero-content-indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customer {
+  background-color: #ffffff;
+}
+
+.customer-wrapper {
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customer__item {
+  width: 270px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px dashed #a07936;
+}
+
+.customer__item-img {
+  display: inline;
+  margin-right: 20px;
+}
+
+.customer__item-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.customer__item-title-desc {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+  font-size: 10px;
+}
+
+.deals {
+  height: 700px;
+  background-color: #f4f4f4;
+  background-image: url("../img/deals/deals-main-bgi.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.deals-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.deals-text {
+  padding-right: 108px;
+  text-align: center;
+}
+
+.deals-text__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
+  display: block;
+  margin-bottom: 17px;
+}
+
+.deals-text__subtitle {
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 26px;
+}
+
+.deals-text__desc {
+  color: #666666;
+  display: block;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  line-height: 22px;
+}
+
+.deals-card__card {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  width: 700px;
+  height: 350px;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.deals-card__card-img {
+  width: 300px;
+  height: 300px;
+  margin: 0 25px;
+}
+
+.deals-card__card-text {
+  height: 100%;
+  display: block;
+}
+
+.deals-card__card-text__rate {
+  margin-top: 68px;
+  margin-bottom: 28px;
+  color: #666666;
+}
+
+.deals-card__card-text__title {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.deals-card__card-text__desc {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #666666;
+}
+
+.deals-card__card-text__price {
+  margin-top: 36px;
+}
+
+.deals-card__card-text__price-actual, .deals-card__card-text__price-old {
+  display: inline-block;
+}
+
+.deals-card__card-text__price-actual {
+  font-size: 26px;
+  margin-right: 30px;
+  color: #a07936;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.deals-card__card-text__price-old {
+  font-size: 18px;
+  color: #666666;
+  text-decoration: line-through;
+  font-family: 'Lato', sans-serif;
+}
+
+.deals-card__card-text__buy-now {
+  margin-top: 30px;
+}
+
+.deals-indication {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 49px);
+  text-align: center;
+}
+
+.deals-indication__item {
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */

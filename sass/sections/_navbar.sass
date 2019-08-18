@@ -1,0 +1,105 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 100px
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 100
+    &-nav
+        height: 100px
+        display: flex
+        justify-content: space-around
+        align-items: centec
+        &-brand
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &__img
+            &-text
+                width: 146px
+                height: 32px
+                margin-left: 14px
+                +l-bold
+                &__title
+                    display: block
+                    text-align: center
+                    text-transform: uppercase
+                    color: #ffffff
+                    font-size: 18px
+                &__desc
+                    display: block
+                    text-align: center
+                    font-size: 12px
+                    display: block
+                    color: #ffffff
+                    letter-spacing: 1.24px
+        &-links
+            width: 632px
+            height: 100%
+            display: flex
+            justify-content: space-around
+            align-items: center
+            &__item
+                +m-bold
+                text-decoration: none
+                text-transform: uppercase
+                color: #ffffff
+                transition: .5s
+                position: relative
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    border-radius: 5px
+                    background-color: #a07936
+                    transition: .5s
+                    opacity: 0
+                    z-index: -1
+                &:hover
+                    &::before
+                        transform: scale(1.5)
+                        opacity: 1
+        &-actions
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &__item
+                margin-right: 34px
+                width: 18px
+                height: 18px
+                cursor: pointer
+                &-wrapper
+                    position: relative
+                    &::after
+                        position: absolute
+                        top: -15px
+                        left: 15px
+                        content: '2'
+                        width: 25px
+                        height: 22px
+                        background-color: $primary 
+                        color: #ffffff
+                        text-align: center
+                        border-radius: 12px
+                        +m-bold
+                        font-weight: 800
+                        font-size: 15px
+            &-hamburger
+                display: flex
+                justify-content: space-between
+                align-items: center
+                flex-direction: column
+                cursor: pointer
+                width: 18px
+                height: 18px
+                &__item
+                    width: 16px
+                    height: 3px
+                    margin-bottom: 1px
+                    background-color: #fff
+
+    

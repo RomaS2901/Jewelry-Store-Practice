@@ -1,0 +1,28 @@
+.customer
+    background-color: $bgc-main
+    &-wrapper
+        min-height: 200px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__item
+        width: 270px
+        height: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px dashed $primary
+        &-img
+            display: inline
+            margin-right: 20px
+        &-title
+            +m-bold
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 14px
+            font-weight: 700
+            &-desc
+                display: block
+                +m-regular
+                color: $text-secondary
+                font-size: 10px
