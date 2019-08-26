@@ -45,6 +45,7 @@
             display: flex
             justify-content: center
             align-items: center
+            cursor: pointer
             &-img
                 width: 300px
                 height: 300px
@@ -89,3 +90,60 @@
         text-align: center
         &__item
             background-color: black
+
+
+// IPad Pro
+@media only screen and (max-width: 1024px)
+    .deals
+        &-wrapper
+            flex-direction: column
+        &-text
+            margin-top: 20px
+            padding: 0
+        &-card
+            &__card
+                top: 35%
+                left: 20%
+// tablets
+@media only screen and (max-width: 768px)
+    .deals
+        &-wrapper
+            flex-direction: column
+        &-text
+            margin-top: 20px
+            padding: 0
+        &-card
+            &__card
+                top: 35%
+                left: 2%
+
+// Small phones
+@media only screen and (max-width: 414px)
+    .deals
+        &-wrapper
+            flex-direction: column
+        &-text
+            margin-top: 20px
+            padding: 0
+        &-card
+            &__card
+                width: 350px
+                top: 35%
+                left: 0
+                width: 100%
+                flex-direction: column
+                &-text
+                    &__title
+                        font-size: 14px
+                        margin: 10px 0
+                    &__rate,
+                    &__desc,
+                    &__price,
+                    &__buy-now
+                        display: none
+            &__main
+                &-img
+                    display: none
+        &-indication
+            left: 0
+            width: 100%

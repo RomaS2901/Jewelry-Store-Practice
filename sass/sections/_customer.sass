@@ -26,3 +26,22 @@
                 +m-regular
                 color: $text-secondary
                 font-size: 10px
+
+// IPad Pro
+@media only screen and (max-width: 1024px)
+    .customer
+        &-wrapper
+            flex-wrap: wrap
+        &__item
+            margin: 5px
+            flex-basis: 40%
+
+@media only screen and (max-width: 414px)
+        .customer
+            &-wrapper
+                flex-wrap: wrap
+            &__item
+                flex-basis: 100%
+                justify-content: flex-start
+                &-img
+                    margin-left: 20px
