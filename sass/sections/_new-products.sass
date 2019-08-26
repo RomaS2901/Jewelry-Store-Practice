@@ -1,0 +1,39 @@
+.new
+    &-products
+        &__title
+            text-align: center
+        &__desc
+            text-align: center
+            margin-bottom: 50px
+        &__separator
+            display: flex
+            justify-content: center
+            align-items: center
+            &-img
+                display: inline-block
+                margin: 0 10px
+            &-sep
+                display: inline-block
+                width: 50px
+                height: 1px
+                background-color: $primary
+        &-item
+            &-wrapper
+                display: flex
+                justify-content: space-between
+                align-items: center
+            &__img
+                width: 100%
+            &-img
+                &-wrapper
+                    width: 370px
+                    height: 370px
+                    position: relative
+                &__info-badge
+                    position: absolute
+                    &--new
+                        top: 10px
+                        left: 10px
+                    &--sale
+                        top: 10px
+                        right: 10px

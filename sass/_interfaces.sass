@@ -1,3 +1,4 @@
+// primary buttons
 .button
     &--primary
         border: none
@@ -7,6 +8,10 @@
         color: #ffffff
         border-radius: 5px
         cursor: pointer
+
+
+
+// slider for images carousel
 .slider__item
     display: inline-block
     width: 20px
@@ -20,3 +25,77 @@
         border-radius: 15px
         width: 40px
         background-color: $primary !important
+
+
+
+// PRODCUT CARD STYLES START ... 
+
+// title for cards with product item
+.product
+    &-title
+        text-transform: uppercase
+        +m-bold
+        font-size: 16px
+
+
+
+// price for cards with product item
+.price
+    &--actual
+        font-size: 26px
+        color: $primary
+        +l-bold
+    &--past
+        font-size: 18px
+        color: $text-secondary
+        text-decoration: line-through
+        +l-regular
+
+// card badge
+.card
+    &-badge
+        width: 50px
+        height: 50px
+        color: white
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &__title
+            font-size: 14px
+            +l-regular
+            color: $badge-title
+            line-height: 20px
+            // display: block
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 30px
+                height: 1px
+                background-color: $badge-title
+                opacity: 0.5
+        &--new
+            background-color: $badge-new
+        &--sale
+            background-color: $badge-sale
+
+// ... PRODUCT CARD END
+
+
+// common things for sections 
+.section
+    margin-top: 100px
+    &-title
+        +m-bold
+        font-size: 24px
+        line-height: 30px
+        text-transform: uppercase
+        color: $section-title
+    &-desc
+        color: $section-desc
+        font-size: 16px
+        +l-regular
+        font-style: italic
+        line-height: 60px
