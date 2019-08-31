@@ -1,14 +1,22 @@
 // primary buttons
 .button
+    border: none
+    padding: 14px 17px
+    border-radius: 5px
+    cursor: pointer
     &--primary
-        border: none
-        padding: 14px 17px
         text-transform: uppercase
         background-color: $primary
         color: #ffffff
-        border-radius: 5px
-        cursor: pointer
+    &--secondary
+        background-color: white
+        color: black
 
+// star ratings
+.fa-star
+    color: $star-rating-not-checked
+.checked
+    color: $star-rating-checked
 
 
 // slider for images carousel
@@ -16,7 +24,7 @@
     display: inline-block
     width: 20px
     height: 20px
-    background-color: #fff
+    background-color: $slider-light
     margin: 10px
     border-radius: 50%
     cursor: pointer
@@ -25,6 +33,8 @@
         border-radius: 15px
         width: 40px
         background-color: $primary !important
+    &--dark
+        background-color: $slider-dark
 
 
 

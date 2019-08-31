@@ -37,3 +37,31 @@
                     &--sale
                         top: 10px
                         right: 10px
+            &-text
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                margin-top: 20px
+            &-price
+                width: 250px
+                display: flex
+                flex-direction: row
+                justify-content: space-around
+                align-items: center
+                margin-bottom: 11px
+            &__rate,
+            &__title
+                margin-bottom: 11px
+        &-indication
+            width: 100%
+            margin-top: 50px
+            text-align: center
+
+// IPad Pro
+@media only screen and (max-width: 1024px)
+    .new
+        &-products
+            &-item
+                &-wrapper
+                    flex-direction: column
